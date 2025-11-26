@@ -320,15 +320,15 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <LocationCard
               title="Albany"
-              address="123 Burger Lane, Albany, OR 97321"
+              address="520 Pacific Blvd SW, Albany, OR 97321"
               hours="Tuesday - Sunday: 11:00 AM - 8:00 PM (Closed Mondays)"
-              phone="(541) 555-0123"
+              phone="(541) 971-5056"
             />
             <LocationCard
-              title="Salem"
-              address="456 Patty Place, Salem, OR 97301"
-              hours="Tuesday - Sunday: 11:00 AM - 8:00 PM (Closed Mondays)"
-              phone="(503) 555-0456"
+              title="Salem (Coming Soon)"
+              address="Location Coming Soon"
+              hours="Opening Soon - Stay Tuned!"
+              phone="Phone Coming Soon"
             />
           </div>
         </div>

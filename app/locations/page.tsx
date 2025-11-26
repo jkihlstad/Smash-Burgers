@@ -50,7 +50,7 @@ export default function LocationsPage() {
 
                 <div className="mb-4 flex items-start gap-3 text-white/80">
                   <MapPin className="mt-1 h-5 w-5 text-primary" />
-                  <p className="flex-1">123 Burger Lane, Albany, OR 97321</p>
+                  <p className="flex-1">520 Pacific Blvd SW, Albany, OR 97321</p>
                 </div>
 
                 <div className="mb-4 flex items-start gap-3 text-white/80">
@@ -65,15 +65,15 @@ export default function LocationsPage() {
                 <div className="mb-6 flex items-start gap-3 text-white/80">
                   <Phone className="mt-1 h-5 w-5 text-primary" />
                   <a
-                    href="tel:+15415550123"
+                    href="tel:+15419715056"
                     className="flex-1 transition-colors hover:text-primary"
                   >
-                    (541) 555-0123
+                    (541) 971-5056
                   </a>
                 </div>
 
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/search/?api=1&query=520+Pacific+Blvd+SW+Albany+OR+97321"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-base font-bold text-white transition-opacity hover:opacity-90"
@@ -97,41 +97,36 @@ export default function LocationsPage() {
               <div className="relative z-10">
                 <h3 className="mb-4 font-display text-2xl font-bold text-white">
                   Salem
+                  <span className="ml-2 text-sm font-normal text-primary">(Coming Soon)</span>
                 </h3>
                 <div className="mb-4 border-t border-white/10"></div>
 
                 <div className="mb-4 flex items-start gap-3 text-white/80">
                   <MapPin className="mt-1 h-5 w-5 text-primary" />
-                  <p className="flex-1">456 Patty Place, Salem, OR 97301</p>
+                  <p className="flex-1">Location Coming Soon</p>
                 </div>
 
                 <div className="mb-4 flex items-start gap-3 text-white/80">
                   <Clock className="mt-1 h-5 w-5 text-primary" />
                   <div className="flex-1">
-                    <p className="font-semibold text-white">Tuesday - Sunday</p>
-                    <p>11:00 AM - 8:00 PM</p>
-                    <p className="mt-1 text-sm text-white/60">(Closed Mondays)</p>
+                    <p className="font-semibold text-white">Opening Soon</p>
+                    <p className="text-sm text-white/60">Stay tuned for updates!</p>
                   </div>
                 </div>
 
                 <div className="mb-6 flex items-start gap-3 text-white/80">
                   <Phone className="mt-1 h-5 w-5 text-primary" />
-                  <a
-                    href="tel:+15035550456"
-                    className="flex-1 transition-colors hover:text-primary"
-                  >
-                    (503) 555-0456
-                  </a>
+                  <p className="flex-1">
+                    Phone Coming Soon
+                  </p>
                 </div>
 
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-base font-bold text-white transition-opacity hover:opacity-90"
+                <button
+                  disabled
+                  className="mt-4 inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-base font-bold text-white/40 cursor-not-allowed"
                 >
-                  Get Directions
-                </a>
+                  Coming Soon
+                </button>
               </div>
             </div>
           </div>

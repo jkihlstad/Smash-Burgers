@@ -212,15 +212,15 @@ export default function AboutPage() {
               <div className="border-t border-gray-200 dark:border-gray-700"></div>
               <div className="flex items-start gap-3 text-text-muted-light dark:text-text-muted-dark">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <p className="flex-1">123 Burger Lane, Albany, OR 97321</p>
+                <p className="flex-1">520 Pacific Blvd SW, Albany, OR 97321</p>
               </div>
               <div className="flex items-start gap-3 text-text-muted-light dark:text-text-muted-dark">
                 <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <p className="flex-1">Mon - Sun: 11:00 AM - 9:00 PM</p>
+                <p className="flex-1">Tue - Sun: 11:00 AM - 8:00 PM (Closed Mondays)</p>
               </div>
               <a
                 className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-base font-bold text-white transition-opacity hover:opacity-90"
-                href="https://maps.google.com/?q=123+Burger+Lane+Albany+OR+97321"
+                href="https://www.google.com/maps/search/?api=1&query=520+Pacific+Blvd+SW+Albany+OR+97321"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -232,24 +232,23 @@ export default function AboutPage() {
             <div className="flex flex-col gap-4 rounded-lg bg-surface-light dark:bg-surface-dark p-6 shadow-sm">
               <h3 className="font-display text-2xl font-bold text-text-light dark:text-text-dark">
                 Salem
+                <span className="ml-2 text-sm font-normal text-primary">(Coming Soon)</span>
               </h3>
               <div className="border-t border-gray-200 dark:border-gray-700"></div>
               <div className="flex items-start gap-3 text-text-muted-light dark:text-text-muted-dark">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <p className="flex-1">456 Patty Place, Salem, OR 97301</p>
+                <p className="flex-1">Location Coming Soon</p>
               </div>
               <div className="flex items-start gap-3 text-text-muted-light dark:text-text-muted-dark">
                 <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <p className="flex-1">Mon - Sun: 11:00 AM - 9:00 PM</p>
+                <p className="flex-1">Opening Soon - Stay Tuned!</p>
               </div>
-              <a
-                className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-base font-bold text-white transition-opacity hover:opacity-90"
-                href="https://maps.google.com/?q=456+Patty+Place+Salem+OR+97301"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                disabled
+                className="mt-4 inline-flex items-center justify-center rounded-full bg-gray-400 dark:bg-gray-600 px-6 py-3 text-base font-bold text-gray-200 dark:text-gray-400 cursor-not-allowed opacity-60"
               >
-                Get Directions
-              </a>
+                Coming Soon
+              </button>
             </div>
           </div>
         </div>
