@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "main": {
+      "path": "/images/IMG_6429.JPG",
+      "alt": "A delicious looking smash burger with melted cheese and fresh lettuce, alongside a portion of crispy golden fries",
+      "description": "Main hero image for homepage"
+    }
+  },
+  "featured": {
+    "burgers": {
+      "path": "/images/IMG_6422.JPG",
+      "alt": "Close up of a juicy smash burger with cheese and pickles on a brioche bun",
+      "description": "Featured burger image for homepage"
+    },
+    "chicken": {
+      "path": "/images/IMG_6427.JPG",
+      "alt": "A crispy fried chicken sandwich with lettuce and sauce on a toasted bun",
+      "description": "Featured chicken sandwich image for homepage"
+    },
+    "reubens": {
+      "path": "/images/IMG_6435.JPG",
+      "alt": "A classic Reuben sandwich sliced in half, showing layers of corned beef, sauerkraut, and Swiss cheese",
+      "description": "Featured Reuben image for homepage"
+    },
+    "fries": {
+      "path": "/images/IMG_6450.JPG",
+      "alt": "A basket of golden, crispy french fries",
+      "description": "Featured fries image for homepage"
+    }
+  },
+  "menuItems": {
+    "classic-smash": {
+      "path": "/images/IMG_6456.JPG",
+      "alt": "The Classic Smash Burger with American cheese and pickles",
+      "description": "Classic smash burger menu item"
+    },
+    "double-bacon": {
+      "path": "/images/IMG_6457.JPG",
+      "alt": "Double Bacon Smash burger with two patties and crispy bacon",
+      "description": "Double bacon smash burger menu item"
+    },
+    "mushroom-swiss": {
+      "path": "/images/IMG_6422.JPG",
+      "alt": "Mushroom Swiss Smash with sautéed mushrooms",
+      "description": "Mushroom swiss burger menu item"
+    },
+    "crispy-chicken": {
+      "path": "/images/IMG_6458.JPG",
+      "alt": "Crispy Chicken Classic sandwich",
+      "description": "Classic crispy chicken sandwich menu item"
+    },
+    "spicy-chicken": {
+      "path": "/images/IMG_6427.JPG",
+      "alt": "Spicy Chicken Deluxe with jalapeños",
+      "description": "Spicy chicken sandwich menu item"
+    },
+    "signature-reuben": {
+      "path": "/images/IMG_6459.JPG",
+      "alt": "The Signature Reuben with corned beef",
+      "description": "Signature Reuben menu item"
+    },
+    "turkey-reuben": {
+      "path": "/images/IMG_6435.JPG",
+      "alt": "Turkey Reuben with coleslaw",
+      "description": "Turkey Reuben menu item"
+    },
+    "classic-fries": {
+      "path": "/images/IMG_6460.JPG",
+      "alt": "Classic crispy golden fries",
+      "description": "Classic fries menu item"
+    },
+    "sweet-potato-fries": {
+      "path": "/images/IMG_6450.JPG",
+      "alt": "Sweet potato fries",
+      "description": "Sweet potato fries menu item"
+    },
+    "onion-rings": {
+      "path": "/images/IMG_6461.JPG",
+      "alt": "Beer-battered crispy onion rings",
+      "description": "Onion rings menu item"
+    }
+  },
+  "about": {
+    "restaurant": {
+      "path": "/images/IMG_6421.JPG",
+      "alt": "Smash Burgers restaurant interior or exterior",
+      "description": "About page restaurant image"
+    }
+  },
+  "USAGE_NOTES": {
+    "description": "This file maps logical image names to actual image file paths.",
+    "categories": {
+      "hero": "Main homepage hero images",
+      "featured": "Featured category images shown on homepage",
+      "menuItems": "Individual menu item images (keyed by menu item ID)",
+      "about": "Images for the about page"
+    },
+    "howToUpdate": [
+      "1. To change an image, update the 'path' field to point to the new image file",
+      "2. Always update the 'alt' text to describe the new image for accessibility",
+      "3. Keep the 'description' field updated for internal reference",
+      "4. Image paths should start with '/images/' and point to files in the public or images directory"
+    ],
+    "howToAddNewImage": [
+      "1. Add your image file to the /images/ directory",
+      "2. Choose the appropriate category (hero, featured, menuItems, about)",
+      "3. Add a new entry with: path, alt text, and description",
+      "4. If it's a menu item image, use the menu item's ID as the key"
+    ]
+  }
+}

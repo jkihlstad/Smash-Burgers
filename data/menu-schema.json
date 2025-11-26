@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Menu Items Schema",
+  "description": "Schema for Smash Burgers menu items. Use this as a reference when adding or editing menu items.",
+  "type": "object",
+  "properties": {
+    "burgers": {
+      "type": "array",
+      "description": "All burger menu items",
+      "items": { "$ref": "#/definitions/menuItem" }
+    },
+    "chicken": {
+      "type": "array",
+      "description": "All chicken sandwich menu items",
+      "items": { "$ref": "#/definitions/menuItem" }
+    },
+    "reubens": {
+      "type": "array",
+      "description": "All Reuben sandwich menu items",
+      "items": { "$ref": "#/definitions/menuItem" }
+    },
+    "sides": {
+      "type": "array",
+      "description": "All side dish menu items",
+      "items": { "$ref": "#/definitions/menuItem" }
+    }
+  },
+  "definitions": {
+    "menuItem": {
+      "type": "object",
+      "required": ["id", "name", "description", "price", "category", "imagePath", "featured"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the menu item. Use lowercase with hyphens (e.g., 'classic-smash'). This should never change once created.",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "examples": ["classic-smash", "double-bacon", "crispy-chicken"]
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the menu item as it appears to customers.",
+          "minLength": 1,
+          "maxLength": 100,
+          "examples": ["The Classic Smash", "Double Bacon Smash"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the menu item. Should be concise and appetizing.",
+          "minLength": 10,
+          "maxLength": 200,
+          "examples": ["A juicy smashed patty, American cheese, pickles, signature sauce."]
+        },
+        "price": {
+          "type": "string",
+          "description": "Price in dollars and cents (e.g., '10.99'). Do NOT include the dollar sign.",
+          "pattern": "^[0-9]+\\.[0-9]{2}$",
+          "examples": ["10.99", "13.99", "4.99"]
+        },
+        "category": {
+          "type": "string",
+          "description": "Category this item belongs to. Must match one of the main category keys.",
+          "enum": ["burgers", "chicken", "reubens", "sides"],
+          "examples": ["burgers", "chicken", "reubens", "sides"]
+        },
+        "imagePath": {
+          "type": "string",
+          "description": "Path to the item's image. Should start with '/images/' and reference a file in the public/images or images directory.",
+          "pattern": "^/images/.*\\.(jpg|jpeg|png|webp|JPG|JPEG|PNG|WEBP)$",
+          "examples": ["/images/IMG_6456.JPG", "/images/classic-burger.jpg"]
+        },
+        "featured": {
+          "type": "boolean",
+          "description": "Whether this item should be featured/highlighted on the menu. Only set a few items to true.",
+          "examples": [true, false]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "USAGE_NOTES": {
+    "HOW_TO_ADD_NEW_ITEM": [
+      "1. Choose the correct category (burgers, chicken, reubens, or sides)",
+      "2. Create a unique 'id' using lowercase letters, numbers, and hyphens only",
+      "3. Write a clear, appetizing 'name' for the item",
+      "4. Write a concise 'description' (keep it under 200 characters)",
+      "5. Set the 'price' as a number with exactly 2 decimal places (no $ symbol)",
+      "6. Set 'category' to match the section you're adding it to",
+      "7. Set 'imagePath' to point to an image in /images/",
+      "8. Set 'featured' to true only for your best/most popular items"
+    ],
+    "HOW_TO_UPDATE_PRICE": [
+      "1. Find the item by its 'name' or 'id'",
+      "2. Update the 'price' field with the new price",
+      "3. Make sure to use exactly 2 decimal places (e.g., '12.99' not '12.9' or '13')"
+    ],
+    "HOW_TO_CHANGE_IMAGE": [
+      "1. Add your new image to the /images/ directory",
+      "2. Update the 'imagePath' field to point to the new image",
+      "3. Make sure the path starts with '/images/'"
+    ],
+    "COMMON_MISTAKES": [
+      "DON'T include the $ symbol in price - use '10.99' not '$10.99'",
+      "DON'T forget the /images/ prefix in imagePath",
+      "DON'T use uppercase or spaces in the 'id' field",
+      "DON'T set too many items as featured - keep it to 1-2 per category"
+    ]
+  }
+}

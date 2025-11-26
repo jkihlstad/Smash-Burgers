@@ -1,0 +1,100 @@
+{
+  "burgers": [
+    {
+      "id": "classic-smash",
+      "name": "The Classic Smash",
+      "description": "A juicy smashed patty, American cheese, pickles, signature sauce.",
+      "price": "10.99",
+      "category": "burgers",
+      "imagePath": "/images/IMG_6456.JPG",
+      "featured": true
+    },
+    {
+      "id": "double-bacon",
+      "name": "Double Bacon Smash",
+      "description": "Two patties, crispy bacon, cheddar, grilled onions, BBQ sauce.",
+      "price": "13.99",
+      "category": "burgers",
+      "imagePath": "/images/IMG_6457.JPG",
+      "featured": true
+    },
+    {
+      "id": "mushroom-swiss",
+      "name": "Mushroom Swiss Smash",
+      "description": "Sautéed mushrooms, Swiss cheese, garlic aioli, fresh arugula.",
+      "price": "12.99",
+      "category": "burgers",
+      "imagePath": "/images/IMG_6422.JPG",
+      "featured": false
+    }
+  ],
+  "chicken": [
+    {
+      "id": "crispy-chicken",
+      "name": "Crispy Chicken Classic",
+      "description": "Golden-fried chicken breast, lettuce, tomato, creamy mayo.",
+      "price": "11.99",
+      "category": "chicken",
+      "imagePath": "/images/IMG_6458.JPG",
+      "featured": true
+    },
+    {
+      "id": "spicy-chicken",
+      "name": "Spicy Chicken Deluxe",
+      "description": "Spicy breaded chicken, pepper jack cheese, jalapeños, chipotle mayo.",
+      "price": "12.99",
+      "category": "chicken",
+      "imagePath": "/images/IMG_6427.JPG",
+      "featured": false
+    }
+  ],
+  "reubens": [
+    {
+      "id": "signature-reuben",
+      "name": "The Signature Reuben",
+      "description": "Corned beef, Swiss cheese, sauerkraut, Russian dressing, grilled rye.",
+      "price": "12.99",
+      "category": "reubens",
+      "imagePath": "/images/IMG_6459.JPG",
+      "featured": true
+    },
+    {
+      "id": "turkey-reuben",
+      "name": "Turkey Reuben",
+      "description": "Sliced turkey, Swiss cheese, coleslaw, Thousand Island, grilled rye.",
+      "price": "11.99",
+      "category": "reubens",
+      "imagePath": "/images/IMG_6435.JPG",
+      "featured": false
+    }
+  ],
+  "sides": [
+    {
+      "id": "classic-fries",
+      "name": "Classic Fries",
+      "description": "Perfectly salted, crispy, and golden brown.",
+      "price": "4.99",
+      "category": "sides",
+      "imagePath": "/images/IMG_6460.JPG",
+      "featured": true
+    },
+    {
+      "id": "sweet-potato-fries",
+      "name": "Sweet Potato Fries",
+      "description": "Crispy sweet potato fries with a hint of cinnamon sugar.",
+      "price": "5.99",
+      "category": "sides",
+      "imagePath": "/images/IMG_6450.JPG",
+      "featured": false
+    },
+    {
+      "id": "onion-rings",
+      "name": "Crispy Onion Rings",
+      "description": "Beer-battered onion rings served with ranch dipping sauce.",
+      "price": "5.99",
+      "category": "sides",
+      "imagePath": "/images/IMG_6461.JPG",
+      "featured": false
+    }
+  ]
+}

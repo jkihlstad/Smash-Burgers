@@ -1,0 +1,208 @@
+================================================================================
+SMASH BURGERS HOME PAGE - COMPONENT TREE
+================================================================================
+
+app/page.tsx (Home Page)
+│
+├── <Header> (components/layout/Header.tsx)
+│   ├── Logo (SVG)
+│   ├── Desktop Navigation
+│   │   ├── Menu Link
+│   │   ├── Locations Link
+│   │   └── Contact Link
+│   └── Mobile Menu
+│       ├── Menu Icon (Lucide)
+│       └── Mobile Links (when open)
+│
+├── Hero Section
+│   ├── Background Image (Next.js Image)
+│   │   └── /images/IMG_6429.JPG
+│   ├── Overlay (black/60)
+│   └── Content
+│       ├── H1: "Simply Better Burgers"
+│       ├── Description Text
+│       └── CTA Button (Link to /menu)
+│
+├── Locations & Hours Section
+│   └── Glass Card (bg-dark-surface)
+│       ├── Locations Column
+│       │   ├── MapPin Icon (Lucide)
+│       │   ├── H2: "Our Locations"
+│       │   ├── Albany, Oregon
+│       │   ├── Salem, Oregon
+│       │   └── Get Directions Link
+│       └── Operating Hours Column
+│           ├── Clock Icon (Lucide)
+│           ├── H2: "Operating Hours"
+│           ├── Tuesday - Sunday
+│           ├── 11:00 AM - 8:00 PM
+│           └── (Closed Mondays)
+│
+├── Famous For Section
+│   ├── Section Header
+│   │   ├── H2: "What We're Famous For"
+│   │   └── Description
+│   └── 4-Column Grid (responsive: 4→2→1)
+│       ├── Smash Burgers Card
+│       │   ├── Image: IMG_6422.JPG (hover zoom)
+│       │   ├── H3: "Smash Burgers"
+│       │   └── Description
+│       ├── Chicken Sandwiches Card
+│       │   ├── Image: IMG_6427.JPG (hover zoom)
+│       │   ├── H3: "Chicken Sandwiches"
+│       │   └── Description
+│       ├── Classic Reubens Card
+│       │   ├── Image: IMG_6435.JPG (hover zoom)
+│       │   ├── H3: "Classic Reubens"
+│       │   └── Description
+│       └── Crispy Fries Card
+│           ├── Image: IMG_6450.JPG (hover zoom)
+│           ├── H3: "Crispy Fries"
+│           └── Description
+│
+├── CTA Section (bg-primary/10)
+│   ├── H2: "Ready to Eat?"
+│   ├── Description
+│   └── CTA Button (Link to /menu)
+│
+└── <Footer> (components/layout/Footer.tsx)
+    ├── Logo (SVG)
+    ├── Navigation Links
+    │   ├── Menu
+    │   ├── Locations
+    │   ├── Contact
+    │   └── Privacy Policy
+    ├── Social Media Icons
+    │   ├── Instagram (SVG)
+    │   ├── Facebook (SVG)
+    │   └── Twitter (SVG)
+    └── Copyright © 2024
+
+================================================================================
+REUSABLE COMPONENTS
+================================================================================
+
+Header Component (components/layout/Header.tsx)
+├── Used on: All pages
+├── Features: Sticky nav, mobile menu, glass background
+└── State: Mobile menu open/closed
+
+Footer Component (components/layout/Footer.tsx)
+├── Used on: All pages
+├── Features: Links, social icons, responsive
+└── State: None (stateless)
+
+GlassCard Component (components/ui/GlassCard.tsx)
+├── Used on: Menu items, feature cards
+├── Features: Liquid glass effects, animations
+└── Props: className, children
+
+Button Component (components/ui/Button.tsx)
+├── Used on: CTAs, forms, actions
+├── Features: Variants, sizes, animations
+└── Props: variant, size, className, children
+
+================================================================================
+DATA FLOW
+================================================================================
+
+App Router (Next.js 15)
+    ↓
+app/layout.tsx (Root Layout)
+    ├── Fonts loaded (Anton, Inter, Jakarta)
+    ├── Global styles applied
+    ├── Noise overlay rendered
+    └── Children rendered
+        ↓
+    app/page.tsx (Server Component)
+        ├── Static data (locations, hours, menu items)
+        ├── Header component
+        ├── Static sections
+        └── Footer component
+
+Client Components (use client):
+    - Header (interactive menu)
+    - GlassCard (Framer Motion)
+    - Button (Framer Motion)
+
+Server Components:
+    - app/page.tsx (main page)
+    - Footer (static links)
+
+================================================================================
+STYLING ARCHITECTURE
+================================================================================
+
+Tailwind Config (tailwind.config.ts)
+    ├── Liquid Glass colors defined
+    ├── Font families with CSS variables
+    └── Custom utilities
+        ↓
+Global Styles (app/globals.css)
+    ├── Tailwind base
+    ├── Tailwind components
+    └── Tailwind utilities
+        ↓
+Component Styles (inline with cn())
+    ├── Responsive classes (sm:, md:, lg:)
+    ├── State classes (hover:, active:, group-hover:)
+    └── Custom glass effects
+
+================================================================================
+IMAGE OPTIMIZATION FLOW
+================================================================================
+
+Source: /images/*.JPG
+    ↓
+Symlink: public/images → /images
+    ↓
+Next.js Image Component
+    ├── Automatic optimization
+    ├── Responsive sizing
+    ├── Format conversion (AVIF, WebP)
+    ├── Lazy loading (except priority)
+    └── Blur placeholder
+        ↓
+Optimized image served to browser
+
+================================================================================
+ANIMATION FLOW
+================================================================================
+
+Framer Motion Components
+    ├── GlassCard
+    │   ├── whileHover={{ y: -5, scale: 1.01 }}
+    │   └── Glow transitions (opacity)
+    ├── Button
+    │   ├── whileHover={{ scale: 1.05 }}
+    │   ├── whileTap={{ scale: 0.95 }}
+    │   └── Shine animation
+    └── Image containers
+        └── CSS transition-transform (zoom)
+
+================================================================================
+RESPONSIVE BREAKPOINTS
+================================================================================
+
+Mobile First Approach:
+
+Default (< 640px)
+    - 1 column grid
+    - Stacked sections
+    - Mobile menu
+
+sm: 640px
+    - 2 column grid
+
+md: 768px
+    - Desktop menu
+    - 2 column split cards
+    - Larger text
+
+lg: 1024px
+    - 4 column grid
+    - Full layout
+
+================================================================================
+END OF COMPONENT TREE
+================================================================================
