@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         // Brand Identity
         primary: {
           DEFAULT: '#FF5E0F',  // Smash Burger Orange
@@ -29,6 +31,13 @@ const config: Config = {
           border: 'rgba(255, 255, 255, 0.08)',
           highlight: 'rgba(255, 255, 255, 0.15)',
         },
+        // Reeners Menu System - exact colors from design
+        reeners: {
+          dark: '#0a0a0a',
+          card: '#141414',
+          orange: '#f97316',
+          border: '#2a2a2a',
+        }
       },
       fontFamily: {
         display: ['var(--font-anton)', 'sans-serif'],

@@ -2,13 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground: #ffffff;
+  --reeners-dark: #0a0a0a;
+  --reeners-card: #141414;
+  --reeners-orange: #f97316;
+  --reeners-border: #2a2a2a;
+}
+
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-dark-bg text-white antialiased;
+    color: var(--foreground);
+    background: var(--reeners-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    @apply antialiased;
+  }
+}
+
+/* Custom utility for the exact nav button style */
+@layer components {
+  .nav-btn {
+    @apply px-6 py-2 rounded-full font-bold text-sm transition-colors border-2;
+  }
+  .nav-btn-active {
+    background-color: var(--reeners-orange);
+    border-color: var(--reeners-orange);
+    @apply text-black;
+  }
+  .nav-btn-inactive {
+    background-color: transparent;
+    border-color: var(--reeners-border);
+    @apply text-white;
+  }
+  .nav-btn-inactive:hover {
+    border-color: var(--reeners-orange);
   }
 }
